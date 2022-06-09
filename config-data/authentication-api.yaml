@@ -14,7 +14,7 @@ jpa:
   properties:
     hibernate:
       dialect: org.hibernate.dialect.PostgreSQL94Dialect
-      default_schema: '{cipher}16f11f7b7b869547d62b716a7e4b03bdf6e7479e4550f9aa3ef61dd1ac8fe568'
+      default_schema: public
       ddl-auto: none
       show-sql: true
       format_sql: true
