@@ -10,17 +10,17 @@ spring:
     url: jdbc:postgresql://localhost:5432/resume-api
     username: '{cipher}f7db90eca885f5f2c9821220d0d17ef027504b47841e9dde4cc60b69733884a9'
     password: '{cipher}8e685297bb1b5690a853a9c8ce9cb8a1b9c47e859478e6c21f02e5c556b53e5c'
-jpa:
-  properties:
-    hibernate:
-      dialect: org.hibernate.dialect.PostgreSQL94Dialect
-      default_schema: '{cipher}16f11f7b7b869547d62b716a7e4b03bdf6e7479e4550f9aa3ef61dd1ac8fe568'
-      ddl-auto: none
-      show-sql: true
-      format_sql: true
-      jdbc:
-        lob:
-          non_contextual_creation: true
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL94Dialect
+        default_schema: '{cipher}16f11f7b7b869547d62b716a7e4b03bdf6e7479e4550f9aa3ef61dd1ac8fe568'
+        ddl-auto: none
+        show-sql: true
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
 management:
   health:
     probes:
