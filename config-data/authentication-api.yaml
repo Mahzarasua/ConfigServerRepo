@@ -4,6 +4,17 @@ server:
     include-message: always
 #Url for Postgres database
 spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL94Dialect
+        default_schema: public
+        ddl-auto: none
+        show-sql: true
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
   datasource:
     driver-class-name: org.postgresql.Driver
     platform: postgresql
