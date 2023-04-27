@@ -21,10 +21,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">ResumeAPI</h3>
+<h3 align="center">ConfigServerRepo</h3>
 
   <p align="center">
-    CRUD operations for Resume API
+    Storage of yaml files for different Spring Boot applications
     <br />
     <a href="https://github.com/Mahzarasua/ConfigServerRepo"><strong>Explore the docs »</strong></a>
     <br />
@@ -118,5 +118,3 @@ Project Link: [https://github.com/Mahzarasua/ConfigServerRepo](https://github.co
 [license-url]: https://github.com/Mahzarasua/ConfigServerRepo/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/Mahzarasua
-[product-screenshot]: images/screenshot.png
-[product-url]: https://github.com/Mahzarasua/ConfigServerRepo
