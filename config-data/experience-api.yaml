@@ -1,0 +1,56 @@
+server:
+  port: 0 #Let Spring define the port automatically
+  error:
+    include-message: always
+#Url for Postgres database
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    platform: postgresql
+    url: jdbc:postgresql://localhost:5432/resume-api
+    username: '{cipher}f7db90eca885f5f2c9821220d0d17ef027504b47841e9dde4cc60b69733884a9'
+    password: '{cipher}8e685297bb1b5690a853a9c8ce9cb8a1b9c47e859478e6c21f02e5c556b53e5c'
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL94Dialect
+        default_schema: '{cipher}16f11f7b7b869547d62b716a7e4b03bdf6e7479e4550f9aa3ef61dd1ac8fe568'
+        ddl-auto: none
+        show-sql: true
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+management:
+  health:
+    probes:
+      enabled: true
+    db:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /admin
+  endpoint:
+    health:
+      show-details: always
+  info:
+    env:
+      enabled: true
+springdoc:
+  api-docs:
+    path: /openapi
+  swagger-ui:
+    path: /swagger-ui-openapi.html
+jwt:
+  secret: '{cipher}5a74b7bbfe0a3e5b9b387b71baf92ee67ac425fc4cdc36200183b9bb945eb53a'
+info:
+  app:
+    license:
+      name: "MIT License"
+      url: "https://opensource.org/licenses/MIT"
+    contact:
+      name: "Miguel Hernandez"
+      url: "https://github.com/mahzarasua"
+      email: "mahzarasua@hotmail.com"

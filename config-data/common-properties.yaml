@@ -1,0 +1,82 @@
+logging:
+  level:
+    com:
+      izars: DEBUG
+      mahzarasua: DEBUG
+    org:
+      springframework: INFO
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+eureka:
+  instance:
+    statusPageUrlPath: ${management.endpoints.web.base-path}/health
+    healthCheckUrlPath: ${management.endpoints.web.base-path}/health
+    preferIpAddress: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    healthcheck:
+      enabled: true
+server:
+  error:
+    include-message: always
+spring:
+  output:
+    ansi:
+      enabled: always
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    platform: postgresql
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL94Dialect
+        default_schema: '{cipher}16f11f7b7b869547d62b716a7e4b03bdf6e7479e4550f9aa3ef61dd1ac8fe568'
+        ddl-auto: none
+        show-sql: true
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+management:
+  health:
+    db:
+      enabled: true
+    diskspace:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /admin
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: false
+  info:
+    env:
+      enabled: true
+springdoc:
+  api-docs:
+    path: /openapi
+  swagger-ui:
+    path: /swagger-ui-openapi.html
+info:
+  app:
+    version: "${project.version}"
+    name: "${project.name}"
+    description: "${project.description}"
+    license:
+      name: "MIT License"
+      url: "https://opensource.org/licenses/MIT"
+    contact:
+      name: "Miguel Hernandez"
+      url: "https://github.com/mahzarasua"
+      email: "mahzarasua@hotmail.com"
+jwt:
+  secret: '{cipher}5a74b7bbfe0a3e5b9b387b71baf92ee67ac425fc4cdc36200183b9bb945eb53a'

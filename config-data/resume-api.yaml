@@ -1,0 +1,11 @@
+server:
+  port: 0 #Let Spring define the port automatically
+#Url for Postgres database
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/resume-api
+    username: '{cipher}f7db90eca885f5f2c9821220d0d17ef027504b47841e9dde4cc60b69733884a9'
+    password: '{cipher}8e685297bb1b5690a853a9c8ce9cb8a1b9c47e859478e6c21f02e5c556b53e5c'
+eureka:
+  instance:
+    appname: resume-api
