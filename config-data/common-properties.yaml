@@ -16,6 +16,9 @@ eureka:
     statusPageUrlPath: ${management.endpoints.web.base-path}/health
     healthCheckUrlPath: ${management.endpoints.web.base-path}/health
     preferIpAddress: true
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
